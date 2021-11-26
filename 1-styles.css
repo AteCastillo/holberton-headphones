@@ -37,10 +37,6 @@
     --font-weight-regular: 500;
     --font-weight-bold: 900;
 
-    /* space between lines */
-    --line-height-small: 1;
-    --line-height-base: 1.5;
-    --line-height-big: 1.8;
 
      /** BUTTON **/
     --button-display: inline-block;
@@ -69,8 +65,7 @@
     --section-title-line-height: var(--line-height-small);
     --section-title-margin: 0;
     --section-title-color: var(--color-white);
-    --section-tagline-transform: uppercase;
-    --section-tagline-color: var(--color-primary);
+    --section-tagline-color: var(--color-black);
     --section-tagline-font-weight: var(--font-weight-bold);
     --section-tagline-margin: 0;
     --section-body-padding: 14rem  14rem;
@@ -85,6 +80,17 @@
     --footer-padding: 5rem 0 1rem;
   }
 
+  @font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+      url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+      url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+      url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
    /* Base
       ============================= */
 
@@ -124,21 +130,7 @@
     top: calc(50% - 20px/2 - 106.5px);
 
   }
-  @media only screen and (max-width: 480px){
-      h2 {
-        margin-top: 40%;
-        height: 80px;
-        top: calc(50% - 80px/2 - 178px);
-      }
-    }
-
-    @media only screen and (max-width: 767px){
-        h3 {
-            margin-top: 10% ;
-            height: 40px;
-            top: calc(50% - 40px/2 - 113px);
-        }
-    }
+ 
     
   a {
     color: var(--text-color);
@@ -184,18 +176,7 @@
   }
 
   
- /* to adjust in a responsive way in cellphones */
-  @media only screen and (max-width: 480px){
-    html {
-        font-size: 57%;
-    }
-  }
-
-  @media only screen and (min-width: 481px) and (max-width: 767px){
-    html {
-      font-size: 60%;
-    }
-  }
+ 
   /*** 2. LAYOUT ***/
   
   /* Layout
@@ -245,23 +226,7 @@
       }
     
     
-      @media only screen and (max-width: 767px) {
-        .navbar-menu {
-          display: none;
-          flex: 1;
-        }
-   
-        :root {
-            --nav-item-margin: 0;
-          }
       
-          .header .nav {
-            flex-direction:column;
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height .2s ease-out;
-          }
-        }
     /* Header
       ============================= */
   
@@ -316,11 +281,7 @@
 
   }
 
-  @media only screen and (max-width: 481px) {
-    .header-container {
-        flex-direction: row-reverse;
-    }
-  }
+  
 
   /* menu btn */
 
@@ -353,34 +314,7 @@
     top: 0;
   }
 
-  @media only screen and (max-width: 767px) {
-    :root {
-      --header-padding: 0 0 0;
-    }
-
-    .header-container {
-      flex-wrap: wrap;
-      padding:  1.5rem 0;
-    }
-
-    .header .menu-icon {
-      display: block;
-    }
-  }
-
-  @media only screen and (max-width: 480px) {
-    .header-logo {
-      flex-basis: 70%;
-      padding: 2rem;
-    }
-  }
-
-  @media only screen and (min-width: 481px) and (max-width: 767px) {
-    .header-logo {
-      flex-basis: 79%;
-      padding: 2rem;
-    }
-  }
+  
 
   /*** 3. SECTION ***/
   
@@ -393,22 +327,6 @@
       .section-header {
         text-align: var(--section-header-align);
         padding: var(--section-header-padding);
-      }
-
-      .section-title {
-        font-size: var(--section-title-font-size);
-        font-weight: var(--section-title-font-weight);
-        line-height: var(--section-title-line-height);
-        margin: var(--section-title-margin);
-        color: var(--section-title-color);
-      }
-
-      .section-tagline {
-        color: var(--section-tagline-color);
-        font-family: var(--section-tagline-font-family);
-        text-transform: var(--section-tagline-transform);
-        font-weight: var(--section-tagline-font-weight);
-        margin: var(--section-tagline-margin);
       }
 
       .section-body {
@@ -455,20 +373,246 @@
 
   }
 
-  @media only screen and (max-width: 767px) { /*to change where the bacl photo will be -to te left*/
+  
+
+  /* Section What we do
+      ============================= */
+  
+   .section-title {
+       color: var(--color-black);
+       margin-top: 20%;
+       font-size: var(--font-size-x-large);
+       height: 40px;
+       top: calc(50% - 40px/2 - 136.5px);
+
+   }
+   
+
+   .section-tagline {
+    margin-top: 5%;
+    color: var(--color-black);
+    text-align: center;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    height: 104px;
+    top: calc(50% - 104px/2 + 40px);
+   }
+
+   .S {
+    margin-top: 1%;
+   }
+
+   
+    [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'holberton_school-icon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 100px;
+        line-height: 1;
+      
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: var(--color-primary);
+      }
+
+    .holberton_school-icon-ic_hearing:before {
+        content: "\e909";
+      }
+    .holberton_school-icon-ic_music:before {
+        content: "\e90d";
+    }
+    .holberton_school-icon-ic_sound:before {
+        content: "\e90e";
+      }
+    .holberton_school-icon-ic_video:before {
+        content: "\e910";
+    }
+
+    /* Lorem ipsum */
+    .titleS {
+        height: 26px; 
+        top: calc(50% - 26px/2 + 12px);
+        color: var(--color-black);
+        font-size: var(--font-size-large);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .section-bodyS {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ic {
+       margin-left: 30%;
+    }
+
+/* Media queries ---------
+------------*/
+
+/* to adjust in a responsive way in cellphones */
+@media only screen and (max-width: 480px){
+html {
+font-size: 57%;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+html {
+font-size: 60%;
+}
+}
+
+@media only screen and (max-width: 480px){
+h2 {
+margin-top: 40%;
+margin-left: 3%;
+height: 80px;
+top: calc(50% - 80px/2 - 178px);
+}
+}
+
+@media only screen and (max-width: 767px){
+h3 {
+margin-top: 10% ;
+height: 40px;
+top: calc(50% - 40px/2 - 113px);
+}
+}
+
+@media only screen and (max-width: 767px and min-width: 480px) {
+.navbar-menu {
+display: none;
+flex: 1;
+}
+
+:root {
+--nav-item-margin: 0;
+}
+
+.header .nav {
+flex-direction:column;
+overflow: hidden;
+max-height: 0;
+transition: max-height .2s ease-out;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.navbar-menu {
+display: none;
+flex: 1;
+}
+
+:root {
+--nav-item-margin: 0;
+}
+
+.header .nav {
+flex-direction:column;
+overflow: hidden;
+max-height: 0;
+transition: max-height .2s ease-out;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.navbar-menu {
+    display: none;
+    flex: 1;
+}
+
+:root {
+    --nav-item-margin: 0;
+    }
+
+    .header .nav {
+    flex-direction:column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .header-container {
+        flex-direction: row-reverse;
+    }
+    }
+
+
+    @media only screen and (max-width: 480px) {
+    .header-logo {
+        flex-basis: 70%;
+        padding: 2rem;
+    }
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .header-logo {
+        flex-basis: 79%;
+        padding: 2rem;
+    }
+    }
+
+
+    @media only screen and (max-width: 767px) {
+    :root {
+        --header-padding: 0 0 0;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+        padding:  1.5rem 0;
+    }
+
+    .header .menu-icon {
+        display: block;
+    }
+    }
+
+    @media only screen and (max-width: 767px) { /*to change where the bacl photo will be -to te left*/
     .section-hero {
-      margin: -0.1rem 0;
+        margin: -0.1rem 0;
     }
 
     .hero-homepage {
-      background-position: 30% ; /*how big the back photo will be*/
+        background-position: 30% ; /*how big the back photo will be*/
     }
 
     .section-hero .section-body {
-      padding: 18rem 0;
+        padding: 18rem 0;
+    }
     }
 
-    
-  }
+    @media only screen and (max-width: 480px){
+    .section-title {
+        margin-top: 40%;
+        height: 80px;
+        top: calc(50% - 80px/2 - 178px);
+        }
+    .section-tagline {
+        padding: 1rem;
+    }
+    }
+    @media only screen and (max-width: 480px){
+        
+        .ic {
+            margin-left: 37%;
+        }
+       .S {
+           margin-right: 20%;
+           margin-left: 20%
+       }
+    }
 
-  
+    @media only screen and (max-width: 767px){
+        .section-bodyS {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    }
