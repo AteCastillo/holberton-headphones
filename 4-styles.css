@@ -175,7 +175,10 @@
     opacity: 0.9;
   }
 
-  
+ /* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+ 
  
   /*** 2. LAYOUT ***/
   
@@ -183,9 +186,11 @@
       ============================= */
   
     .container { /* centers everything */
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 80%;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      padding: 50px 0;
     }
   /* Navbar
       ============================= */
@@ -227,7 +232,7 @@
     
     
       
-    /* Header
+    /* Header Hero section
       ============================= */
   
   .header {
@@ -315,8 +320,11 @@
   }
 
   
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
 
-  /*** 3. SECTION ***/
+  /*** SECTION ***/
   
   /* Section (all styles)
       ============================= */
@@ -358,6 +366,9 @@
     --section-title-color: var(--color-white);
     background: var(--color-black);
     }
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
 
     /* Section HERO
       ============================= */
@@ -373,36 +384,39 @@
 
   }
 
-  
+ /* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+ 
 
-  /* Section What we do
-      ============================= */
+/* Section What we do
+============================= */
+    .wrapFlex {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0 0 0;
+    }
   
    .section-title {
        color: var(--color-black);
-       margin-top: 20%;
        font-size: var(--font-size-x-large);
-       height: 40px;
-       top: calc(50% - 40px/2 - 136.5px);
-
    }
    
 
    .section-tagline {
-    margin-top: 5%;
     color: var(--color-black);
-    text-align: center;
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
-    height: 104px;
-    top: calc(50% - 104px/2 + 40px);
    }
 
-   .S {
-    margin-top: 1%;
-   }
-
-   
+.section-elements {
+    width: 217px;
+    height: 225px;
+    text-align: center;
+    margin: auto;
+    padding: 0 0 130px 0;
+}
     [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
         /* use !important to prevent issues with browser extensions that change fonts */
         font-family: 'holberton_school-icon' !important;
@@ -434,23 +448,19 @@
 
     /* Lorem ipsum */
     .titleS {
-        height: 26px; 
-        top: calc(50% - 26px/2 + 12px);
         color: var(--color-black);
         font-size: var(--font-size-large);
         font-weight: var(--font-weight-bold);
     }
 
-    .section-bodyS {
-        display: flex;
-        flex-direction: row;
-    }
+    
 
-    .ic {
-       margin-left: 30%;
-    }
+  /* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+ 
 
-    /* 7. OUR RESULTS SECTION
+    /* OUR RESULTS SECTION
   ============================= */
 
 
@@ -487,7 +497,11 @@
     font-size: var(--button-font-size);
 }
 
-/* 8. CONTACT SECTION
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+
+/*  CONTACT SECTION
   ============================= */
 
   .section-title {
@@ -543,19 +557,24 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-black);
 }
-/* 9. FOOTER
-  ============================= */
 
-  /* 9. FOOTER
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+
+  /* FOOTER
   ============================= */
 
 .wrapFooter {
     width: 100%;
-    height: 249px;
+    height: 100%;
     background-color: var(--color-black);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.button2 {
+    margin-left: -50%;
 }
 
 .holberton_school-icon-ic_facebook::before {
@@ -576,22 +595,24 @@
     justify-content: space-between;
 }
 
-.beSocial [class^="hbicon-"],
-.beSocial [class*=" hbicon-"] {
-    font-family: 'icomoon' !important;
+.beSocial [class^="holberton_school-icon-ic"],
+.beSocial [class*=" holberton_school-icon-ic"] {
+    font-family: 'holberton_school-icon' !important;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: 30px;
+    margin-top: 25%;
     color: var(--color-white);
 }
 
 .wrapFooter>p {
     opacity: 0.35;
-    padding: 0 0 40px 0;
+    padding: 0 0 80px 0;
 }
 
 .social {
@@ -601,16 +622,32 @@
 }
 
 /* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
 
 
-/* Media queries ---------
-------------*/
+/* Media queries ---------------------*/
 
-/* to adjust in a responsive way in cellphones */
-@media only screen and (max-width: 480px){
-html {
-font-size: 57%;
+/* to adjust in a responsive way */
+
+@media only screen and (max-width: 1400px) {
+    .polygon {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .backPolygon {
+        margin: 20px;
+       
+    }
+ 
+    h3 {
+        margin-top: 10%;
+        height: 80px;
+    }
+   
 }
+@media only screen and (max-width: 480px){
+
 h2 {
 margin-top: 40%;
 margin-left: 3%;
@@ -626,20 +663,7 @@ p .section-body {
     height: 80px;
     top: calc(50% - 80px/2 - 178px);
     }
-.section-tagline {
-    padding: 1rem;
-}
-.ic {
-        margin-left: 37%;
-    }
-   .S {
-       margin-right: 20%;
-       margin-left: 20%
-   }
-   .polygon {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .header-container {
     flex-direction: row-reverse;
 }
@@ -647,54 +671,26 @@ p .section-body {
     flex-basis: 70%;
     padding: 2rem;
 }
+.wrapForm {
+    margin-left: -10px;
+}
 /* FOOTER
     ============================= */
-    /* social
-    ============================= */
-    .social {
-        flex-direction: column;
-        align-items: center;
-    }
-    .beSocial {
-        padding: 40px 0 0 0;
-    }
+.social {
+    flex-direction: column;
+    align-items: center;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-    html {
-        font-size: 60%;
-        }
-        h3 {
-            margin-top: 10% ;
-            height: 40px;
-            top: calc(50% - 40px/2 - 113px);
-            }
-    .header-logo {
-        flex-basis: 79%;
-        padding: 2rem;
-    }
-    .navbar-menu {
-        display: none;
-        flex: 1;
-    }
-
-:root {
---nav-item-margin: 0;
+.beSocial {
+    padding: 1px 0 0 0;
+    margin-top: -20%;
 }
 
-.header .nav {
-flex-direction:column;
-overflow: hidden;
-max-height: 0;
-transition: max-height .2s ease-out;
 }
-}
+
 
     
     @media only screen and (max-width: 767px) { /*to change where the back photo will be -to te left*/
-        :root {
-            --header-padding: 0 0 0;
-        }
-    
+       
         .header-container {
             flex-wrap: wrap;
             padding:  1.5rem 0;
@@ -718,12 +714,7 @@ transition: max-height .2s ease-out;
     .section-hero .section-body {
         padding: 18rem 0;
     }
-    
-    .section-bodyS {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
+   
     .polygon {
         display: flex;
         flex-wrap: wrap;
@@ -731,6 +722,6 @@ transition: max-height .2s ease-out;
     }
     .backPolygon {
         margin: 20px;
+       
     }
 }
-
